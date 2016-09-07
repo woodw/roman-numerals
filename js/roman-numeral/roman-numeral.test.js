@@ -106,5 +106,30 @@ Test.kata.RomanNumeral = function (){
 
 			Assert.Equal(romanNumeral, value);
 		}
+
+		[Fact]
+		function ShouldSetValueVIFromNumber6(){
+			var romanNumeral = "VI";
+			var number = 6;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.setFromNumber(number);
+			var value = underTest.get();
+
+			Assert.Equal(romanNumeral, value);
+		}
+
+		[Fact]
+		function ShouldSetValueVIFromNumber555(){
+			var romanNumeral = "DLV";
+			var number = 555;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.setFromNumber(number);
+			var value = underTest.get();
+
+			Assert.Equal(romanNumeral, value);
+		}
+		
 	}
 }

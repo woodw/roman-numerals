@@ -12,28 +12,38 @@ kata.RomanNumeral = function () {
 	};
 
 	this.setFromNumber = function (newNumber){
-		switch(newNumber){
-			case 1: 
-				value = 'I';
-				break;
-			case 5:
-				value = 'V';
-				break;
-			case 10:
-				value = 'X';
-				break;
-			case 50:
-				value = 'L';
-				break;			
-			case 100:
-				value = 'C';
-				break;
-			case 500:
-				value = 'D';
-				break;
-			case 1000:
-				value = 'M';
-				break;
+		var remainder = newNumber;
+		while(remainder>0){
+			switch(true){
+				case (remainder>=1000): 
+					value += 'M';
+					remainder -= 1000;
+					break;
+				case (remainder>=500):
+					value += 'D';
+					remainder -= 500;
+					break;
+				case (remainder>=100):
+					value += 'C';
+					remainder -= 100;
+					break;
+				case (remainder>=50):
+					value += 'L';
+					remainder -= 50;
+					break;			
+				case (remainder>=10):
+					value += 'X';
+					remainder -= 10;
+					break;
+				case (remainder>=5):
+					value += 'V';
+					remainder -= 5;
+					break;
+				case (remainder>=1):
+					value += 'I';
+					remainder -= 1;
+					break;
+			}
 		}
 	};
 
