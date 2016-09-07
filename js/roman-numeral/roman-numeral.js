@@ -12,7 +12,14 @@ kata.RomanNumeral = function () {
 	};
 
 	this.setFromNumber = function (newNumber){
-		value = "I";
+		switch(newNumber){
+			case 1: 
+				value = "I";
+				break;
+			case 5:
+				value = "V";
+				break;
+		}
 	};
 
 }
