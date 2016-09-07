@@ -72,7 +72,7 @@ Test.kata.RomanNumeral = function (){
 		}
 
 		[Fact]
-		function ShouldSetValueCFromNumber100(){
+		function ShouldSetValueCFromNumberOneHundred(){
 			var romanNumeral = "C";
 			var number = 100;
 			var underTest = new kata.RomanNumeral;
@@ -84,7 +84,7 @@ Test.kata.RomanNumeral = function (){
 		}
 
 		[Fact]
-		function ShouldSetValueDFromNumber500(){
+		function ShouldSetValueDFromNumberFiveHundred(){
 			var romanNumeral = "D";
 			var number = 500;
 			var underTest = new kata.RomanNumeral;
@@ -96,7 +96,7 @@ Test.kata.RomanNumeral = function (){
 		}
 
 		[Fact]
-		function ShouldSetValueMFromNumber1000(){
+		function ShouldSetValueMFromNumberOneThousand(){
 			var romanNumeral = "M";
 			var number = 1000;
 			var underTest = new kata.RomanNumeral;
@@ -108,7 +108,7 @@ Test.kata.RomanNumeral = function (){
 		}
 
 		[Fact]
-		function ShouldSetValueVIFromNumber6(){
+		function ShouldSetValueVIFromNumberSix(){
 			var romanNumeral = "VI";
 			var number = 6;
 			var underTest = new kata.RomanNumeral;
@@ -120,7 +120,7 @@ Test.kata.RomanNumeral = function (){
 		}
 
 		[Fact]
-		function ShouldSetValueVIFromNumber555(){
+		function ShouldSetValueVIFromNumberFiveHundredFiftyFive(){
 			var romanNumeral = "DLV";
 			var number = 555;
 			var underTest = new kata.RomanNumeral;
@@ -131,5 +131,7 @@ Test.kata.RomanNumeral = function (){
 			Assert.Equal(romanNumeral, value);
 		}
 		
+		[Fact]
+		function ShouldSetValueIVFromNumberFour
 	}
 }
