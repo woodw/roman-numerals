@@ -14,25 +14,25 @@ kata.RomanNumeral = function () {
 	this.setFromNumber = function (newNumber){
 		switch(newNumber){
 			case 1: 
-				value = "I";
+				value = 'I';
 				break;
 			case 5:
-				value = "V";
+				value = 'V';
 				break;
 			case 10:
-				value = "X";
+				value = 'X';
 				break;
 			case 50:
-				value = "L";
+				value = 'L';
 				break;			
 			case 100:
-				value = "C";
+				value = 'C';
 				break;
 			case 500:
-				value = "D";
+				value = 'D';
 				break;
 			case 1000:
-				value = "M";
+				value = 'M';
 				break;
 		}
 	};
