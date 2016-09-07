@@ -94,5 +94,17 @@ Test.kata.RomanNumeral = function (){
 
 			Assert.Equal(romanNumeral, value);
 		}
+
+		[Fact]
+		function ShouldSetValueMFromNumber1000(){
+			var romanNumeral = "M";
+			var number = 1000;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.setFromNumber(number);
+			var value = underTest.get();
+
+			Assert.Equal(romanNumeral, value);
+		}
 	}
 }

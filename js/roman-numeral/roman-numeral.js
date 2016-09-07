@@ -31,6 +31,9 @@ kata.RomanNumeral = function () {
 			case 500:
 				value = "D";
 				break;
+			case 1000:
+				value = "M";
+				break;
 		}
 	};
 
