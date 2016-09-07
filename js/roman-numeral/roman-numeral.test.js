@@ -16,7 +16,7 @@ Test.kata.RomanNumeral = function (){
 			underTest.set(romanNumeral);
 			var value = underTest.get();
 
-			Assert.Equal(value, romanNumeral);
+			Assert.Equal(romanNumeral, value);
 		}
 	}
 
@@ -32,7 +32,9 @@ Test.kata.RomanNumeral = function (){
 			underTest.setFromNumber(number);
 			var value = underTest.get();
 
-			Assert.Equal(value, romanNumeral);
+			Assert.Equal(romanNumeral, value);
 		}
+
+		
 	}
 }
