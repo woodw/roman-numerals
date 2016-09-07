@@ -14,9 +14,25 @@ Test.kata.RomanNumeral = function (){
             var underTest = new kata.RomanNumeral;
 
 			underTest.set(romanNumeral);
+			var value = underTest.get();
 
-			Assert.Equal(underTest.get(), romanNumeral);
+			Assert.Equal(value, romanNumeral);
 		}
 	}
 
+	[Fixture]
+	function SetFromNumber(){
+
+		[Fact]
+		function ShouldSetValueIFromNumberOne(){
+			var romanNumeral = "I";
+			var number = 1;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.setFromNumber(number);
+			var value = underTest.get();
+
+			Assert.Equal(value, romanNumeral);
+		}
+	}
 }

@@ -5,10 +5,14 @@ kata.RomanNumeral = function () {
 
 	this.set = function (newNumeral){
 		value = newNumeral;
-	}
+	};
 
 	this.get = function (){
 		return value;
-	}
+	};
+
+	this.setFromNumber = function (newNumber){
+		value = "I";
+	};
 
 }
