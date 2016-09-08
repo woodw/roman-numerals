@@ -3,7 +3,34 @@
 	<head>
         <meta charset="utf-8" />
 		<title>Roman Numeral Converter</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			body{
+				font-family:verdana;
+				color:#333;
+
+				display:flex;
+				flex-direction:column;
+				align-items:center;
+			}
+			header{
+				margin:1% 10vw;
+			}
+			main{
+				width:100%;
+
+				display:flex;
+				flex-wrap:wrap;
+				justify-content:center;
+			}
+			input{
+				font-size:1.5rem;
+
+				padding:1.5rem;
+				margin:1%;
+
+				border-radius:3%;
+			}
+		</style>
 		<script src="js/roman-numeral/roman-numeral.js"></script>
 	</head>
 	<body>
@@ -11,8 +38,8 @@
 			<h1>Convert between numbers and roman numerals</h1>
 		</header>
 		<main>
-			<input id="romnom" placeholder="VII" onkeyup="domEvents.solveNumber()"/>
-			<input id="number" type="number" placeholder="7" onkeyup="domEvents.solveRomNom()"/>
+			<input id="romnom" type="text" placeholder="VII" oninput="domEvents.solveNumber()"/>
+			<input id="number" type="number" placeholder="7" oninput="domEvents.solveRomNom()"/>
 		</main>
 		<script>
 			var domEvents = {
@@ -24,6 +51,7 @@
 					this._numberNode.value = this._romanNumeral.toNumber();
 				},
 				solveRomNom: function (){
+					console.log(this._numberNode.value);
 					var number = parseInt(this._numberNode.value) || 0;
 
 					this._romanNumeral.setFromNumber(number);
