@@ -1,9 +1,9 @@
-Function.RegisterNamespace("Test.kata");
+Function.RegisterNamespace("Test");
 
 [Import("./roman-numeral.js")]
 
 [Fixture]
-Test.kata.RomanNumeral = function (){
+Test.RomanNumeral = function (){
 	
 	[Fixture]
     function SetNumeral(){
@@ -11,7 +11,7 @@ Test.kata.RomanNumeral = function (){
 		[Fact]
 		function ShouldSetValueOfNumeral(){
 			var romanNumeral = "I";
-            var underTest = new kata.RomanNumeral;
+            var underTest = new RomanNumeral;
 
 			underTest.set(romanNumeral);
 			var value = underTest.get();
@@ -26,10 +26,10 @@ Test.kata.RomanNumeral = function (){
 		[Fact]
 		function ShouldSetValueIFromNumberOne(){
 			var romanNumeral = "I";
-			var number = 1;
-			var underTest = new kata.RomanNumeral;
+			var startNumber = 1;
+			var underTest = new RomanNumeral;
 
-			underTest.setFromNumber(number);
+			underTest.setFromNumber(11);
 			var value = underTest.get();
 
 			Assert.Equal(romanNumeral, value);
@@ -39,7 +39,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueVFromNumberFive(){
 			var romanNumeral = "V";
 			var number = 5;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -51,7 +51,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueXFromNumberTen(){
 			var romanNumeral = "X";
 			var number = 10;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -63,7 +63,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueLFromNumberFifty(){
 			var romanNumeral = "L";
 			var number = 50;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -75,7 +75,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueCFromNumberOneHundred(){
 			var romanNumeral = "C";
 			var number = 100;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -87,7 +87,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueDFromNumberFiveHundred(){
 			var romanNumeral = "D";
 			var number = 500;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -99,7 +99,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueMFromNumberOneThousand(){
 			var romanNumeral = "M";
 			var number = 1000;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -111,7 +111,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueVIFromNumberSix(){
 			var romanNumeral = "VI";
 			var number = 6;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -123,7 +123,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueVIFromNumberFiveHundredFiftyFive(){
 			var romanNumeral = "DLV";
 			var number = 555;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -135,7 +135,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSetValueToReplaceSetsOfFour(){
 			var romanNumeral = "IX";
 			var number = 9;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.setFromNumber(number);
 			var value = underTest.get();
@@ -150,7 +150,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldReturnNumberRepresentaionOfNumeralValue(){
 			var romanNumeral = "X";
 			var number = 10;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.set(romanNumeral);
 			var value = underTest.toNumber();
@@ -162,7 +162,7 @@ Test.kata.RomanNumeral = function (){
 		function ShouldSubtractSmallerNumeralsLeadingLargerNumerals(){
 			var romanNumeral = "XXIV";
 			var number = 24;
-			var underTest = new kata.RomanNumeral;
+			var underTest = new RomanNumeral;
 
 			underTest.set(romanNumeral);
 			var value = underTest.toNumber();
