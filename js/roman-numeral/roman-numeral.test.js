@@ -26,10 +26,10 @@ Test.RomanNumeral = function (){
 		[Fact]
 		function ShouldSetValueIFromNumberOne(){
 			var romanNumeral = "I";
-			var startNumber = 1;
+			var number = 1;
 			var underTest = new RomanNumeral;
 
-			underTest.setFromNumber(11);
+			underTest.setFromNumber(number);
 			var value = underTest.get();
 
 			Assert.Equal(romanNumeral, value);
