@@ -38,7 +38,6 @@ var RomanNumeral = (function (){
 			var keyInt = parseInt(numeralKeys[pointer]);
 
 			if(remainder>=keyInt){
-			console.log(keyInt, remainder, numeral_enum[''+numeralKeys[pointer]]);
 				remainder -= keyInt;
 				value += numeral_enum[''+numeralKeys[pointer]];
 			}
