@@ -157,5 +157,17 @@ Test.kata.RomanNumeral = function (){
 
 			Assert.Equal(number, value);
 		}
+
+		[Fact]
+		function ShouldSubtractSmallerNumeralsLeadingLargerNumerals(){
+			var romanNumeral = "XXIV";
+			var number = 24;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.set(romanNumeral);
+			var value = underTest.toNumber();
+
+			Assert.Equal(number, value);
+		}
 	}
 }
