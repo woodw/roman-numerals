@@ -45,4 +45,46 @@ kata.RomanNumeral = function () {
 		}
 	};
 
+	this.toNumber = function (){
+		var count = 0;
+
+		for(var i=0;i<value.length;i++){
+			var additive = 0;
+			switch(value[i]){
+				case 'I':
+					additive = 1;
+					if(value[i+1]=='V' || value[i+1]=='X'){
+						additive *= -1;
+					}
+					break;
+				case 'V':
+					additive = 5;
+					break;
+				case 'X':
+					additive = 10;
+					if(value[i+1]=='L' || value[i+1]=='C'){
+						additive *= -1;
+					}
+					break;
+				case 'L':
+					additive = 50;
+					break;
+				case 'C':
+					additive = 100;
+					if(value[i+1]=='D' || value[i+1]=='M'){
+						additive *= -1;
+					}
+					break;
+				case 'D':
+					additive = 500;
+					break;
+				case 'M':
+					additive = 1000;
+					break;
+			}
+			count += additive;
+		}
+		return count;
+	}
+
 }
