@@ -45,4 +45,8 @@ kata.RomanNumeral = function () {
 		}
 	};
 
+	this.toNumber = function (){
+		return 10;
+	}
+
 }

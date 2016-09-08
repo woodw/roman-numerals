@@ -143,4 +143,19 @@ Test.kata.RomanNumeral = function (){
 			Assert.Equal(romanNumeral, value);
 		}
 	}
+
+	[Fixture]
+	function ToNumber(){
+		[Fact]
+		function ShouldReturnNumberRepresentaionOfNumeralValue(){
+			var romanNumeral = "X";
+			var number = 10;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.set(romanNumeral);
+			var value = underTest.toNumber();
+
+			Assert.Equal(number, value);
+		}
+	}
 }
