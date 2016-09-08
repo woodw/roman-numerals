@@ -132,6 +132,15 @@ Test.kata.RomanNumeral = function (){
 		}
 		
 		[Fact]
-		function ShouldSetValueIVFromNumberFour
+		function ShouldSetValueToReplaceSetsOfFour(){
+			var romanNumeral = "IX";
+			var number = 9;
+			var underTest = new kata.RomanNumeral;
+
+			underTest.setFromNumber(number);
+			var value = underTest.get();
+
+			Assert.Equal(romanNumeral, value);
+		}
 	}
 }
